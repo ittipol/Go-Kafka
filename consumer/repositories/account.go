@@ -25,7 +25,6 @@ type accountRepository struct {
 }
 
 func NewAccountRepository(db *gorm.DB) AccountRepository {
-	// db.AutoMigrate(BankAccount{})
 	return &accountRepository{db}
 }
 

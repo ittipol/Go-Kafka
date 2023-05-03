@@ -23,4 +23,4 @@ COPY --from=build /go-app/consumer/config.yaml ./config.yaml
 # EXPOSE 4040
 
 ENTRYPOINT ["./app"]
-# CMD [ "tail","-F","anyf" ]
+# CMD [ "tail","-F","anyfile" ]

@@ -22,4 +22,4 @@ COPY --from=build /go-app/producer/config.yaml ./config.yaml
 EXPOSE 4000
 
 ENTRYPOINT ["./app"]
-# CMD [ "tail","-F","anyf" ]
+# CMD [ "tail","-F","anyfile" ]

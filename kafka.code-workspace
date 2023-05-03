@@ -1,8 +1,5 @@
 {
-	"folders": [
-		{
-			"path": "server"
-		},
+	"folders": [		
 		{
 			"path": "consumer"
 		},
@@ -17,6 +14,9 @@
 		},
 		{
 			"path": "nextjs"
+		},
+		{
+			"path": "account"
 		}
 	],
 	"settings": {}
