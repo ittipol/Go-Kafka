@@ -1,29 +1,6 @@
-## Start server
-Start kafka, zookeeper and mysql server
+## Start via docker compose
 
 ``` bash
-docker-compose up -d
+docker-compose up -d --build
 ```
-
-## Create table
-
-``` bash
-# go to migration dir
-cd migration
-
-# run
-go run main.go
-```
-
-## Start producer server
-``` bash
-# go to producer dir
-cd producer
-
-# run
-go run main.go
-```
-
-
-
 

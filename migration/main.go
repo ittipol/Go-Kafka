@@ -1,25 +1,20 @@
 package main
 
-import (
-	"consumer/repositories"
-	"migration/orm/db"
-)
-
 func main() {
 
 	//
 	// dsn := "host=localhost user=postgres password=1234 dbname=test_db port=5432 sslmode=disable TimeZone=Asia/Bangkok"
 
 	// Mysql
-	dsn := "root:1234@tcp(127.0.0.1:3306)/test_db?charset=utf8mb4&parseTime=True&loc=Local"
+	// dsn := "root:1234@tcp(127.0.0.1:3306)/test_db?charset=utf8mb4&parseTime=True&loc=Local"
 
-	db := db.GetConnection(dsn, false)
+	// db := db.GetConnection(dsn, false)
 
-	err := db.Migrator().CreateTable(repositories.BankAccount{})
+	// err := db.Migrator().CreateTable(repositories.BankAccount{})
 
-	if err != nil {
-		panic(err)
-	}
+	// if err != nil {
+	// 	panic(err)
+	// }
 
 	// err := db.Migrator().CreateTable(repository.ItemToCategory{})
 

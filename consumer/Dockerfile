@@ -14,8 +14,6 @@ FROM golang:1.19  as production
 
 WORKDIR /go-app
 
-# RUN export GO_ENV_MODE=production
-
 COPY --from=build /go-app/app ./
 
 EXPOSE 5050

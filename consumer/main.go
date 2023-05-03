@@ -45,6 +45,12 @@ func main() {
 
 	db := db.GetConnection(dsn, false)
 
+	err = db.AutoMigrate(repositories.BankAccount{})
+
+	if err != nil {
+		panic(err)
+	}
+
 	accountRepository := repositories.NewAccountRepository(db)
 	accountEventHandler := services.NewAccountEventHandler(accountRepository)
 	consumerGroupHandler := services.NewConsumerGroupHandler(accountEventHandler)
