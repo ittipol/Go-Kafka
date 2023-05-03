@@ -5,9 +5,8 @@ docker-compose up -d --build
 ```
 
 ## Test
-``` bash
-# after start server
-# open link below to test
-[http://localhost:3000](http://localhost:3000/)
-```
+
+after start server
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to test service and application.
 
