@@ -1,4 +1,4 @@
-## Start via docker compose
+## Start server and application
 
 ``` bash
 docker-compose up -d --build
@@ -6,7 +6,7 @@ docker-compose up -d --build
 
 ## Test
 ``` bash
-# after start these server
+# after start server
 # open link below to test
 [http://localhost:3000](http://localhost:3000/)
 ```
