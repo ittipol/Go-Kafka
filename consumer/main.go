@@ -35,8 +35,6 @@ func main() {
 	}
 	defer consumer.Close()
 
-	// dsn := "root:1234@tcp(127.0.0.1:3306)/micro?charset=utf8mb4&parseTime=True&loc=Local"
-
 	dsn := fmt.Sprintf("%v:%v@tcp(%v:%v)/%v?charset=utf8mb4&parseTime=True&loc=Local",
 		viper.GetString("db.username"),
 		viper.GetString("db.password"),

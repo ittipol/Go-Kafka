@@ -9,6 +9,7 @@ services:
       - "zookeeper_data:/bitnami"
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
+
   kafka:
     image: docker.io/bitnami/kafka:3.4
     ports:
@@ -20,9 +21,11 @@ services:
       - KAFKA_ENABLE_KRAFT=no
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
     depends_on:
       - zookeeper
+      - db
+
   db:
     image: mysql:8.0
     container_name: mysql
@@ -31,6 +34,27 @@ services:
       MYSQL_ROOT_PASSWORD: 1234
     ports:
       - 3306:3306
+
+  producer_app:
+    build: 
+      context: .
+      dockerfile: producer.Dockerfile
+    container_name: producer-go
+    restart: unless-stopped
+    ports:
+      - 4000:4000
+    depends_on:
+      - kafka
+
+  consumer_app:
+    build: 
+      context: .
+      dockerfile: consumer.Dockerfile
+    container_name: consumer-go
+    restart: unless-stopped    
+    depends_on:
+      - kafka
+
   busybox:
     image: busybox
     container_name: busybox

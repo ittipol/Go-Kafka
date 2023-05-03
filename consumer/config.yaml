@@ -1,12 +1,12 @@
 kafka:
   servers:
-    - localhost:9092
+    - kafka:9092
   group: accountConsumer
 
 db:
   driver: mysql
-  host: localhost
+  host: db
   port: 3306
   username: root
   password: 1234
-  database: micro
+  database: test_db

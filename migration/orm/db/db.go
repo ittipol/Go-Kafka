@@ -31,13 +31,16 @@ func GetConnection(dsn string, dryRun bool) *gorm.DB {
 	// dial := postgres.Open(dsn)
 	dial := mysql.Open(dsn)
 
+	fmt.Println("Create Connection")
+
 	conn, err := gorm.Open(dial, &gorm.Config{
 		Logger: &sqlLogger{},
 		DryRun: dryRun,
 	})
 
 	if err != nil {
-		panic("failed to connect database")
+		// panic("failed to connect database")
+		panic(err)
 	}
 
 	fmt.Println("Database Connected")

@@ -11,7 +11,7 @@ func main() {
 	// dsn := "host=localhost user=postgres password=1234 dbname=test_db port=5432 sslmode=disable TimeZone=Asia/Bangkok"
 
 	// Mysql
-	dsn := "root:1234@tcp(127.0.0.1:3306)/micro?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:1234@tcp(127.0.0.1:3306)/test_db?charset=utf8mb4&parseTime=True&loc=Local"
 
 	db := db.GetConnection(dsn, false)
 

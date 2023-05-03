@@ -7,12 +7,12 @@ replace consumer => ../consumer
 replace events => ../events
 
 require (
-	gorm.io/driver/postgres v1.5.0
+	consumer v0.0.0-00010101000000-000000000000
+	gorm.io/driver/mysql v1.5.0
 	gorm.io/gorm v1.25.0
 )
 
 require (
-	consumer v0.0.0-00010101000000-000000000000 // indirect
 	events v0.0.0-00010101000000-000000000000 // indirect
 	github.com/Shopify/sarama v1.38.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
@@ -26,9 +26,6 @@ require (
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-uuid v1.0.3 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
-	github.com/jackc/pgpassfile v1.0.0 // indirect
-	github.com/jackc/pgservicefile v0.0.0-20221227161230-091c0ba34f0a // indirect
-	github.com/jackc/pgx/v5 v5.3.0 // indirect
 	github.com/jcmturner/aescts/v2 v2.0.0 // indirect
 	github.com/jcmturner/dnsutils/v2 v2.0.0 // indirect
 	github.com/jcmturner/gofork v1.7.6 // indirect
@@ -54,5 +51,4 @@ require (
 	golang.org/x/text v0.7.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	gorm.io/driver/mysql v1.5.0 // indirect
 )

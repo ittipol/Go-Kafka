@@ -14,6 +14,9 @@
 		},
 		{
 			"path": "migration"
+		},
+		{
+			"path": "nextjs"
 		}
 	],
 	"settings": {}
