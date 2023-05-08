@@ -1,6 +1,6 @@
 # Go programming language - Kafka
 
-## Packages
+## Go Packages
 
 - sarama [https://pkg.go.dev/github.com/shopify/sarama](https://pkg.go.dev/github.com/shopify/sarama)
 - viper [https://pkg.go.dev/github.com/spf13/viper](https://pkg.go.dev/github.com/spf13/viper)
@@ -25,6 +25,11 @@ go get gorm.io/gorm
 go gorm.io/driver/mysql
 ```
 
+## Software stack
+- Go
+- Kafka
+- Next.js
+- MySQL
 
 ## Start server and application
 
@@ -34,6 +39,6 @@ docker-compose up -d --build
 
 ## Test
 
-after start server
+After server started
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to test service and application.
