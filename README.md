@@ -34,7 +34,7 @@ go gorm.io/driver/mysql
 ## Start server and application
 
 ``` bash
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 ## Test
