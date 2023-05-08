@@ -42,3 +42,24 @@ docker compose up -d --build
 After server started
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to test service and application.
+
+## Test managing account by curl command
+Add account
+```bash
+curl --location --request POST 'http://127.0.0.1:4000/openAccount' --header 'Content-Type: application/json' --data-raw '{"AccountHolder": "Test user1","AccountType": 1,"OpeningBalance": 1000000.00}'
+```
+
+Deposit
+``` bash
+curl --location --request POST 'http://127.0.0.1:4000/depositFund' --header 'Content-Type: application/json' --data-raw '{"ID":"Input_ID","Amount":20000}'
+```
+
+Withdraw
+``` bash
+curl --location --request POST 'http://127.0.0.1:4000/withdrawFund' --header 'Content-Type: application/json' --data-raw '{"ID":"Input_ID","Amount":20000}'
+```
+
+Close account
+``` bash
+curl --location --request POST 'http://127.0.0.1:4000/closeAccount' --header 'Content-Type: application/json' --data-raw '{"ID":"Input_ID"}'
+```
